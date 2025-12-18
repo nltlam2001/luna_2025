@@ -75,8 +75,8 @@ docker build --network=host -t luna_api:v1.0.0 .
 ### 3. Run Container
 ```bash
 docker run --rm -p 8000:8000 \
-  --name luna-infer \
-  luna-infer:latest
+  --name luna_api \
+  luna_api:v1.0.0
 ```
 
 ### 4. Test API bằng curl
