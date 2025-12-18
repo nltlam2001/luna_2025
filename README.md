@@ -70,7 +70,7 @@ docker build -t luna_api:v1.0.0 .
 Nếu gặp lỗi ```textTemporary failure resolving 'deb.debian.org'``` thì thử
 
 ```bash
-docker build --network=host -t luna_api .
+docker build --network=host -t luna_api:v1.0.0 .
 ```
 
 ### 3. Run Container
@@ -111,9 +111,7 @@ Nếu bạn chạy curl ở ngoài thư mục project, hãy dùng đường dẫ
 ```
 
 Ví dụ kết quả trả về
-json
-Copy code
-```bash
+```json
 {
   "status":"success",
   "data":{
@@ -126,11 +124,11 @@ Copy code
 }
 ```
 
-Authentication
+#### 4.3 Authentication
 Service yêu cầu Bearer Token trong header:
 ```bash
 Authorization: Bearer cac-van-de-hien-dai-khmt
 ```
-Nếu token không hợp lệ, service trả về 401 Unauthorized.
 
+Nếu token không hợp lệ, service trả về ```text401 Unauthorized.```
 ```
