@@ -2,7 +2,7 @@
 
 ## Giới thiệu
 
-Dịch vụ này cung cấp REST API để dự đoán loại nốt phổi (lung lesion) từ ảnh CT định dạng `.mha`, sử dụng mô hình CNN ConVNeXt kết hợp dữ liệu metadata lâm sàng. Service được xây dựng bằng FastAPI, hỗ trợ xác thực bằng Bearer Token, và có thể chạy trên CPU.
+Dịch vụ này cung cấp REST API để dự đoán loại nốt phổi từ ảnh CT định dạng `.mha`, sử dụng mô hình CNN ConVNeXt kết hợp dữ liệu metadata lâm sàng. Service được xây dựng bằng FastAPI, hỗ trợ xác thực bằng Bearer Token, và có thể chạy trên CPU.
 
 ---
 
@@ -21,7 +21,6 @@ project/
 │ └── timer.py
 │
 ├── models/
-│ ├── focal_loss.py 
 │ ├── model.py
 │ └── best_model.pth
 │
@@ -67,7 +66,7 @@ cd luna_2025
 docker build -t luna_api:v1.0.0 .
 ```
 
-Nếu gặp lỗi ```textTemporary failure resolving 'deb.debian.org'``` thì thử
+Nếu gặp lỗi ```Temporary failure resolving 'deb.debian.org'``` thì thử:
 
 ```bash
 docker build --network=host -t luna_api:v1.0.0 .
@@ -130,5 +129,4 @@ Service yêu cầu Bearer Token trong header:
 Authorization: Bearer cac-van-de-hien-dai-khmt
 ```
 
-Nếu token không hợp lệ, service trả về ```text401 Unauthorized.```
-```
+Nếu token không hợp lệ, service trả về ```401 Unauthorized.```

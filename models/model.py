@@ -1,13 +1,12 @@
 import torch
 import torch.nn as nn
-from torchvision.models import convnext_tiny, ConvNeXt_Tiny_Weights
+from torchvision.models import convnext_tiny
 from utils.logger import setup_logger
 
 logger = setup_logger(
     name="model",
     log_dir="logs/model",
 )
-
 
 class ResidualBlock(nn.Module):
     def __init__(self, dim: int, dropout: float = 0.4):
@@ -133,8 +132,7 @@ class ConvNeXtTiny_2D_Meta_CBAM(nn.Module):
     def __init__(
         self,
         meta_dim: int = 2,
-        in_channels: int = 5,
-        pretrained: bool = True,
+        in_channels: int = 5
     ):
         super().__init__()
 
@@ -228,7 +226,7 @@ def load_flexible_state_dict(model, ckpt_path, device="cpu", verbose=True):
         # 1) original key
         candidates.append(k)
 
-        # 2) strip 'module.' (MedicalNet typically has module.*)
+        # 2) strip 'module.'
         if k.startswith("module."):
             k2 = k[len("module."):]
             candidates.append(k2)
