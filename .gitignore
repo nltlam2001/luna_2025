@@ -48,7 +48,6 @@ logs/
 *.ckpt
 *.npz
 *.npy
-*.mha
 *.mhd
 *.nii
 *.nii.gz

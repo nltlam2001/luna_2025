@@ -36,7 +36,6 @@ datasets/
 luna/
 luna25/
 luna_venv/
-*.mha
 *.mhd
 *.nii
 *.nii.gz
