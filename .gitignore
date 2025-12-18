@@ -1,22 +1,69 @@
-### AL ###
-#Template for AL projects for Dynamics 365 Business Central
-#launch.json folder
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.pyd
+*.so
+*.egg-info/
+dist/
+build/
+pip-wheel-metadata/
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+.pytype/
+.pyre/
+
+# ===== Envs =====
+.venv/
+venv/
+env/
+ENV/
+.conda/
+*.conda
+*.env
+.env
+
+# ===== IDE =====
 .vscode/
-#Cache folder
-.alcache/
-#Symbols folder
-.alpackages/
-#Snapshots folder
-.snapshots/
-#Testing Output folder
-.output/
-#Extension App-file
-*.app
-#Rapid Application Development File
-rad.json
-#Translation Base-file
-*.g.xlf
-#License-file
-*.flf
-#Test results file
-TestResults.xml
+.idea/
+*.iml
+
+# ===== OS =====
+.DS_Store
+Thumbs.db
+
+# ===== Logs =====
+logs/
+*.log
+
+# ===== Jupyter =====
+.ipynb_checkpoints/
+
+# ===== Model / Data (medical imaging) =====
+*.pth
+*.pt
+*.onnx
+*.ckpt
+*.npz
+*.npy
+*.mha
+*.mhd
+*.nii
+*.nii.gz
+*.dcm
+
+# If you have big datasets in repo folder
+data/
+datasets/
+luna/
+luna25/
+luna_venv/
+outputs/
+runs/
+
+# ===== Secrets =====
+*token*
+*secret*
+*apikey*

@@ -1,0 +1,58 @@
+# VCS
+.git
+.gitignore
+
+# Python caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+build/
+dist/
+
+# Envs
+.venv/
+venv/
+env/
+.conda/
+*.env
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# Logs & outputs
+logs/
+*.log
+runs/
+outputs/
+
+# Large data / medical files (đỡ copy vào image)
+data/
+datasets/
+luna/
+luna25/
+luna_venv/
+*.mha
+*.mhd
+*.nii
+*.nii.gz
+*.dcm
+*.npy
+*.npz
+
+# Checkpoints
+*.pth
+*.pt
+*.onnx
+*.ckpt
+
+# Not needed
+.ipynb_checkpoints/
+*.ipynb
+README*.md
+docs/
+tests/
