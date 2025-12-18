@@ -37,8 +37,7 @@ app.middleware("http")(auth_middleware)
 # Load model…
 model = ConvNeXtTiny_2D_Meta_CBAM(
     meta_dim=2,
-    in_channels=3,
-    pretrained=True,
+    in_channels=3
 ).to(device)
 
 # load MedicalNet pretrained backbone

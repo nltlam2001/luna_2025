@@ -139,7 +139,7 @@ class ConvNeXtTiny_2D_Meta_CBAM(nn.Module):
         super().__init__()
 
         # -------- Backbone --------
-        weights = ConvNeXt_Tiny_Weights.IMAGENET1K_V1 if pretrained else None
+        weights = None
         backbone = convnext_tiny(weights=weights)
 
         # ---- adapt input channels (3 -> in_channels) ----
